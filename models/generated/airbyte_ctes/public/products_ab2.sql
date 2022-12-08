@@ -11,7 +11,7 @@ select
     cast(sku as {{ dbt_utils.type_string() }}) as sku,
     cast({{ adapter.quote('name') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('name') }},
     cast(slug as {{ dbt_utils.type_string() }}) as slug,
-    cast(tags as {{ type_json() }}) as tags,
+     cast(tags as {{ dbt_utils.type_string() }}) as tags,
     cast(price as {{ dbt_utils.type_string() }}) as price,
     _links,
     cast(images as {{ type_json() }}) as images,
